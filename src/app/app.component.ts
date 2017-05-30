@@ -1,7 +1,18 @@
-import { Component } from '@angular/core';
+﻿import { Component } from '@angular/core';
+
+export class Hero {
+    id: number;
+    name: string;
+}
 
 @Component({
-  selector: 'my-app',
-  template: `<h1>Hello {{name}}</h1>`,
+    selector: 'my-app',
+    template: `<h1>{{title}}</h1><h2>{{hero.name}} details!</h2>`,
 })
-export class AppComponent  { name = 'Angular'; }
+export class AppComponent {
+    title = 'League of Legends Heroes';
+    hero: Hero = {
+        id: 1,
+        name: 'Jinx'
+    };
+}
